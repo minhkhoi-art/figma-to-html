@@ -46,6 +46,7 @@ a {
   background: #fffcf4;
 }
 .header.fixed {
+  z-index: 1;
   position: sticky;
   top: -28px;
 }
@@ -115,10 +116,13 @@ a {
 }
 
 .hero .hero-summary {
-  padding: 24px;
   width: 270px;
+  height: 244px;
+  top: 373px;
+  left: 435px;
+  opacity: 1;
+  padding: 24px;
   position: absolute;
-  bottom: 48px;
   left: 250px;
   border-radius: 12px;
   background: #fff;
