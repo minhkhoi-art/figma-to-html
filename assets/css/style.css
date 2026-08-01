@@ -459,3 +459,70 @@ dùng break-all để nó không bị vỡ */
   font-style: italic;
   line-height: 1.54; /* 153.846% */
 }
+
+/* ========features 1========= */
+.features {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+.features .images img {
+  width: 270px;
+  height: 404px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.features .lower {
+  margin-top: 34px;
+}
+
+.features .content {
+  /* do quy định của class main-content : là 1170px : nên sẽ lấy cái phần khung :
+   470px chia cho 1170px : ra 41% */
+  width: 41%;
+  /* căn tất cả nội dung vào giữa dùng cách này */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+
+.features .cta-btn {
+  margin-top: 32px;
+  width: 137px;
+  height: 50px;
+  border-radius: 26px;
+  background: var(--primary-color);
+}
+/* ===========feature2============ */
+.features-2 {
+  /* 2 cái khối đều có padding là 65px : tổng là 130px :
+  lấy 200 - 130 = 70px */
+  margin-top: 70px;
+}
+.features-2 .body {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.features .content {
+  width: 49%;
+}
+.features-2 .images img {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
+}
