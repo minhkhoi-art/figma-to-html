@@ -48,6 +48,25 @@ a {
   line-height: 1.27;
   letter-spacing: -0.76%;
 }
+/* Dùng đề phòng khi mô tả quá dài : dùng nó giới hạn lại chỉ hiện 1 dòng */
+.line-camp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* Dùng đề phòng khi mô tả quá dài : dùng nó giới hạn lại chỉ hiện 2 dòng */
+.line-camp.line-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* nếu 1 từ quá dài mà box không đủ chỗ chứa : sẽ bị vỡ giao diện :
+dùng break-all để nó không bị vỡ */
+.break-all {
+  word-break: break-all;
+}
 /* =========header============== */
 .header {
   background: #fffcf4;
@@ -208,7 +227,7 @@ a {
 }
 
 .hero .hero-cta {
-  min: width 180px;
+  min-width: 180px;
   background-color: var(--primary-color);
 }
 
@@ -306,6 +325,7 @@ a {
   gap: 30px;
 }
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
@@ -371,4 +391,71 @@ a {
 
 .popular .course-item .btn-book:hover {
   background: var(--primary-color);
+}
+
+/* ========feedback========= */
+.feedback {
+  margin-top: 135px;
+  background: #2e2100;
+  padding: 96px 0;
+}
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+.feedback-item {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+}
+.feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.feedback-item .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42; /* 141.667% */
+}
+.feedback-item .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+.feedback-item .dots {
+  gap: 6px;
+  display: flex;
+  margin-top: 28px;
+}
+
+.feedback-item .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback-item .dot.active {
+  background: var(--primary-color);
+  /* bỏ hình bàn tay khi trỏ chuột vào */
+  cursor: default;
+}
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54; /* 153.846% */
 }
